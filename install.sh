@@ -12,6 +12,7 @@ echo "  dotfiles located at: $DOTFILES"
 echo "  home     located at: $HOME"
 
 echo " -> Copying local and config... "
+mkdir -p $HOME/.local
 cp -R $DOTFILES/local/* $HOME/.local
 cp -R $DOTFILES/config/* $HOME/.config
 
@@ -22,7 +23,7 @@ sudo apt-get upgrade --yes
 
 echo " -> Installing packages... "
 sudo apt-get install --yes zsh neofetch htop curl wget zip unzip sed mc micro python3 python3-pip httpie git gpg tmux nano || {
-    echo " ERROR: Failed to install packages"
+    echo " ERROR: Failed to install packages: $?"
     exit 1
 }
 
