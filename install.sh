@@ -22,7 +22,7 @@ sudo apt-get update --yes
 sudo apt-get upgrade --yes
 
 echo " -> Installing packages... "
-sudo apt-get install --yes zsh neofetch htop curl wget zip unzip sed mc micro python3 python3-pip httpie git gpg tmux nano vim || {
+sudo apt-get install --yes net-tools build-essentials zsh neofetch htop curl wget zip unzip sed mc micro python3 python3-pip httpie git gpg tmux nano vim locales || {
     echo " ERROR: Failed to install packages: $?"
     exit 1
 }
@@ -72,7 +72,8 @@ echo " -> Copying files"
 cp -R $DOTFILES/files/* $HOME
 
 echo " -> Installing lang <en_US.UTF-8>"
+sudo update-locale "LANG=en_US.UTF-8"
 sudo locale-gen "en_US.UTF-8"
-sudo dpkg-reconfigure locales
+sudo dpkg-reconfigure --frontend noninteractive locales
 
 echo " Prepare done"
