@@ -1,4 +1,5 @@
 source $HOME/.local/aliases.sh
+source $HOME/.local/env.sh
 
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
