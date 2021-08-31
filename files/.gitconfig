@@ -110,8 +110,7 @@
   default = upstream
 [core]
   autocrlf = false
-  editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+  editor = node # vim / micro
 [advice]
   statusHints = false
 [diff]
@@ -123,3 +122,7 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
+
+[user]
+  name = "Artem Mishin"
+  email = "themrlokopoff@gmail.com"

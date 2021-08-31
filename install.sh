@@ -71,4 +71,8 @@ sudo chsh --shell $(which zsh) $USER
 echo " -> Copying files"
 cp -R $DOTFILES/files/* $HOME
 
+echo " -> Installing lang <en_US.UTF-8>"
+sudo locale-gen "en_US.UTF-8"
+sudo dpkg-reconfigure locales
+
 echo " Prepare done"
