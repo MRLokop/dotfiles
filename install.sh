@@ -22,7 +22,7 @@ sudo apt-get update --yes
 sudo apt-get upgrade --yes
 
 echo " -> Installing packages... "
-sudo apt-get install --yes zsh neofetch htop curl wget zip unzip sed mc micro python3 python3-pip httpie git gpg tmux nano || {
+sudo apt-get install --yes zsh neofetch htop curl wget zip unzip sed mc micro python3 python3-pip httpie git gpg tmux nano vim || {
     echo " ERROR: Failed to install packages: $?"
     exit 1
 }
